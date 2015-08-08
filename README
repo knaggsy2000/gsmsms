@@ -1,0 +1,121 @@
+GSMSMS - Release v0.2.1 on 10/12/2008
+=====================================
+Link: http://code.google.com/p/gsmsms/
+
+For license and copyright, please see the LICENSE file.
+
+
+Usage
+=====
+On the command line: -
+
+% python sendsms.py
+
+ OR
+
+% python receivesms.py
+
+ OR
+
+% python smsserver.py
+
+ OR
+
+% python webfrontend.py
+
+This will output the arguments which you need to pass to send/receive an SMS, SMS server, or fire up the web frontend for the SMS server.
+
+
+Current Features
+================
+1. Sends an SMS in TEXT mode using a GSM modem
+2. Receives SMS and then e-mails them to where the user has defined
+3. A server component which combines points 1 and 2 (you can add messages to the queue using the "-a" option - more information in "usage")
+4. Very basic web frontend for sending SMS messages using the SMS server component
+
+Future Features
+===============
+1. Support PDU mode - mobile phones tend to only support this mode
+
+"Maybe" Future Features
+=======================
+1. Get the SMS server to monitor a mailbox and send SMS from an e-mail
+
+
+Installation
+============
+FreeBSD
+^^^^^^^
+
+Here are the packages I've currently got installed for GSMSMS to work: -
+
+================================================================================================================================
+Name			|	Download From		|	Directory
+========================+===============================+=======================================================================
+py25-serial		|	Ports			|	/usr/ports/comms/py-serial
+python25		|	Ports			|	/usr/ports/lang/python
+================================================================================================================================
+
+You can install them in any order, you might want to make sure the your ports collection is up-to-date.  Python 2.5 is normally installed by default.
+
+
+Linux - (X/K)Ubuntu/Debian
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Enter the following commands in a terminal session: -
+
+sudo apt-get update
+sudo apt-get install python-serial
+
+Linux - Red Hat/CentOS/etc
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+TO DO.
+
+
+Microsoft Windows
+^^^^^^^^^^^^^^^^^
+
+Install the following packages IN ORDER (later versions should be fine): -
+
+================================================================================================================================================================================
+Name						|	Download From
+================================================+===============================================================================================================================
+python-2.5.2.msi				|	http://www.python.org/ftp/python/2.5.2/python-2.5.2.msi
+Numeric-24.2.win32-py2.5.exe			|	http://rene.f0o.com/%7Erene/stuff/Numeric-24.2.win32-py2.5.exe
+pywin32-211.win32-py2.5.exe			|	http://downloads.sourceforge.net/pywin32/pywin32-211.win32-py2.5.exe?modtime=1212253052&big_mirror=0&filesize=5381561
+pyserial-2.4.win32.exe				|	http://downloads.sourceforge.net/pyserial/pyserial-2.4.win32.exe?modtime=1215392805&big_mirror=0
+================================================================================================================================================================================
+
+Then you'll need to add the Python directory into your environment path.  Usually, "Control Panel"->"System"->"Advanced"->"Environment Variables"->"System Variables"->ADD ";C:\Python25" to the end of the PATH variable string.
+
+Notice the semi-colon, this IS required otherwise the path won't be valid.
+
+
+FAQ
+===
+Q. What are the dependencies for this program?
+A. Python v2.4 or greater (>= v2.5 is preferred) and pyserial.  That's it!
+
+Q. What operating systems does it support?
+A. I develop and test GSMSMS with FreeBSD 7.0, it should work in other POSIX compliant operating systems as well as Linux.
+
+Q. Can I create (port) of GSMSMS?
+A. By all means! Be sure to read the LICENSE as your port will inherit the license.
+
+Q. I've looked at your code and it's rubbish...
+A. Thanks (!), I'm fairly new to Python so expect a few bugs!  If you can provide me with any pointers I'll be grateful.
+
+Q. I've found a bug! What do I do?
+A. Let me know on the forum so I can fix it in a future version.
+
+Q. I would like a feature that's not in GSMSMS...
+A. That's not a question, but let me know on the forum if it isn't in the future features at the top of this file!
+
+Q. How often do you do updates?
+A. I release them whenever I can, but I'll try to release an update at least once a month.  I'm currently in a full-time job and develop GSMSMS in my spare time so please, be patient!
+
+
+Legal
+=====
+As per LICENSE.
+
+<EOF>
